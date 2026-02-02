@@ -4,8 +4,9 @@ import numpy as np
 
 app = Flask(__name__)
 
-model = pickle.load(open("C:\\Users\\hp\\Linear_diabites\\linear_regression_model_Diabites.pkl", "rb"))
-scaler = pickle.load(open("C:\\Users\\hp\\Linear_diabites\\scaler.pkl", "rb"))
+model = pickle.load(open("linear_regression_model_Diabites.pkl", "rb"))
+scaler = pickle.load(open("scaler.pkl", "rb"))
+
 
 @app.route('/')
 def home():
