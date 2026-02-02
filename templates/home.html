@@ -1,3 +1,81 @@
-<h1>
-    hello world
-</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Diabetes Prediction</title>
+
+    <style>
+        body{
+            background:#eef2f5;
+            font-family: Arial;
+        }
+
+        .container{
+            width:420px;
+            margin:auto;
+            margin-top:80px;
+            background:white;
+            padding:25px;
+            border-radius:10px;
+            box-shadow:0px 0px 10px #ccc;
+        }
+
+        input{
+            width:100%;
+            padding:8px;
+            margin:6px 0;
+        }
+
+        button{
+            width:100%;
+            padding:10px;
+            background:#007bff;
+            color:white;
+            border:none;
+            margin-top:10px;
+            cursor:pointer;
+        }
+
+        h2{
+            text-align:center;
+        }
+
+        h3{
+            text-align:center;
+            color:green;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h2>Diabetes Prediction</h2>
+
+<form action="/predict" method="post">
+
+<input type="number" step="any" name="age" placeholder="Age" required>
+<input type="number" step="any" name="sex" placeholder="Sex (0 or 1)" required>
+<input type="number" step="any" name="bmi" placeholder="BMI" required>
+<input type="number" step="any" name="bp" placeholder="Blood Pressure" required>
+
+<input type="number" step="any" name="s1" placeholder="S1" required>
+<input type="number" step="any" name="s2" placeholder="S2" required>
+<input type="number" step="any" name="s3" placeholder="S3" required>
+<input type="number" step="any" name="s4" placeholder="S4" required>
+<input type="number" step="any" name="s5" placeholder="S5" required>
+<input type="number" step="any" name="s6" placeholder="S6" required>
+
+<button type="submit">Predict</button>
+
+</form>
+
+<br>
+
+<h3>{{ prediction_text }}</h3>
+
+</div>
+
+</body>
+</html>

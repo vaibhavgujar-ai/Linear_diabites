@@ -1,0 +1,11 @@
+flask
+pandas
+numpy
+requests
+sqlalchemy
+matplotlib
+scikit-learn
+beautifulsoup4
+pytest
+flask-restful
+pickle
